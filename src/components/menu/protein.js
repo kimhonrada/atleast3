@@ -1,18 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Protein = () => {
+  const [protein, setProtein] = useState("");
+
+  const handleChange = (e) => {
+    setProtein(e.target.value);
+  };
+
   return (
     <>
-      <label htmlFor='proteinForm' className='form-label'>
-        protein
-      </label>
-      <select className='form-select' aria-label='Default select example'>
-        <option value='1'>One</option>
-        <option value='2'>Two</option>
-        <option value='3'>Three</option>
-      </select>
+      <div>
+        <label htmlFor='proteinForm' className='form-label'>
+          protein - {protein}
+        </label>
+        <select
+          className='form-select'
+          aria-label='Default select example'
+          onChange={handleChange}
+        >
+          <option value='chicken'>chicken</option>
+          <option value='beef'>beef</option>
+          <option value='pork'>pork</option>
+        </select>
+      </div>
     </>
   );
 };
