@@ -8,12 +8,10 @@ import Carbs from "/src/components/menu/carbs.js";
 import CurrentMenu from "/src/components/currentMenu.js";
 
 const App = () => {
-  // const currentList = ["rice", "chicken", "carrots"];
-
   const [currentList, setCurrentList] = useState([]);
 
   const updateList = (newItem) => {
-    if (!currentList.includes(newItem)) {
+    if (!currentList.includes(newItem) && newItem !== "Choose an ingredient") {
       setCurrentList((list) => [...list, newItem]);
     }
   };

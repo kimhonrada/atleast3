@@ -3,7 +3,7 @@ import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Protein = ({ updateList }) => {
-  const [protein, setProtein] = useState("");
+  // const [protein, setProtein] = useState("");
 
   const handleChange = (e) => {
     updateList(e.target.value);
@@ -13,13 +13,14 @@ const Protein = ({ updateList }) => {
     <>
       <div>
         <label htmlFor='proteinForm' className='form-label'>
-          protein - {protein}
+          protein
         </label>
         <select
           className='form-select'
           aria-label='Default select example'
           onChange={handleChange}
         >
+          <option>Choose an ingredient</option>
           <option value='chicken'>chicken</option>
           <option value='beef'>beef</option>
           <option value='pork'>pork</option>
