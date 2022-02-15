@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const Carbs = () => {
+const Carbs = ({ updateList }) => {
   const [carbs, setCarbs] = useState("");
 
   const handleChange = (e) => {
-    setCarbs(e.target.value);
+    updateList(e.target.value);
   };
 
   return (

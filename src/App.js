@@ -22,8 +22,8 @@ const App = () => {
     <>
       <h1>at least 3</h1>
       <Protein updateList={updateList} />
-      <Veggies />
-      <Carbs />
+      <Veggies updateList={updateList} />
+      <Carbs updateList={updateList} />
       <CurrentMenu currentList={currentList} />
     </>
   );
