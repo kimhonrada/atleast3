@@ -7,7 +7,7 @@ const CurrentMenu = ({ currentList }) => {
 
   return (
     <div>
-      <h1>Current Menu</h1>
+      <h1>Current Menu - {currentList.length}</h1>
       {list}
     </div>
   );
