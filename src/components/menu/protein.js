@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const Protein = () => {
+const Protein = ({ updateList }) => {
   const [protein, setProtein] = useState("");
 
   const handleChange = (e) => {
-    setProtein(e.target.value);
+    updateList(e.target.value);
   };
 
   return (
